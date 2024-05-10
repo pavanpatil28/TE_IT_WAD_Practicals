@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Local File Contents</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    #fileContents {
+      display: none; /* Hide file content initially */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-3">Contents of Local File</h2>
+    <button id="toggleBtn" class="btn btn-primary mb-3">Show File Content</button>
+    <div id="fileContents" class="card">
+      <div class="card-body"></div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Path to your local file
+      var filePath = 'file.txt'; // Update with your file path
+      var fileContentsDiv = $('#fileContents');
+
+      // Function to fetch file contents
+      function fetchFileContents() {
+        $.ajax({
+          url: filePath,
+          type: 'GET',
+          dataType: 'text',
+          success: function(data) {
+            fileContentsDiv.find('.card-body').html(data); // Insert file contents directly
+          },
+          error: function(xhr, status, error) {
+            fileContentsDiv.find('.card-body').html(`<p class="text-danger">Error loading file: ${error}</p>`);
+          }
+        });
+      }
+
+      // Initially fetch file contents
+      fetchFileContents();
+
+      // Button click event to toggle display of file contents
+      $('#toggleBtn').click(function() {
+        fileContentsDiv.slideToggle();
+        $(this).text(function(i, text) {
+          return text === 'Show File Content' ? 'Hide File Content' : 'Show File Content';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

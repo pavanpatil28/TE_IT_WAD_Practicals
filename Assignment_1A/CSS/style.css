@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navleft{
+    text-align: center;
+    cursor: pointer;
+}
+
+.navleft:hover{
+    color: rgb(175, 134, 250);
+}
+
+.header{
+    padding: 0.5rem 2.5rem 0rem 3.5rem;
+    background-color: rgb(238, 238, 238);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}   
+
+.navmiddle{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.navright{
+    display: flex;
+    gap: 1rem;
+}
+
+i{
+    cursor: pointer;
+}
+
+i:hover{
+    color: rgb(175, 134, 250);
+}
+
+.sidebar{
+    background-color: rgb(247, 247, 241);
+    height: 60rem;
+    min-width: 15rem;
+    padding: 1rem;
+}
+
+.sidebarcontent{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+#sidebarcontents{
+    width: fit-content;
+}
+
+#sidebarcontents:hover{
+    color: rgb(175, 134, 250);
+}
+
+.signout{
+    margin-top: 24rem;
+}
+
+.sidebarlinks{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.mainbodycontent{
+    display: flex;
+}
+
+.mainbodyimages{
+    width: 15rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.mainbodyimages:hover{
+    transform: scale(1.2); 
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.mainbodycenter{
+    padding-top: 1rem;
+    margin-left: 5rem;
+}
+
+.mainbodyhead{
+    cursor: pointer;
+}
+
+.mainbodyheadtxt{
+    margin-top: 1rem;
+    display: flex;
+    gap: 3rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 0.7rem;
+}
+
+.mainbodyimgtxt{
+    display: flex;
+    font-size: 0.8rem;
+}
+
+.card{
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    width: 19rem;
+}
+
+.card:hover{
+    border: 1px solid rgb(175, 134, 250);
+}
+
+#rightlist{
+    margin-left: 3rem;
+    width: 19.5rem;
+    margin-top: 1rem;
+}
+
+.rightcontent{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+
+.rightpaybtn{
+    margin-top: 2rem;
+}
+
+.rightpaybtn div{
+    background-color: black;
+    width: 7.5rem;
+    padding: 0.7rem 1.1rem 0.7rem 1.1rem;
+    color: white;
+    font-weight: 600;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.rightpaybtn div:hover{
+    background-color: rgb(175, 134, 250);
+}
+
+li{
+    cursor: pointer;
+}
+
+li:hover{
+    color: rgb(175, 134, 250);
+}
+
