@@ -1,0 +1,13 @@
+.box{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10rem;
+    text-transform: uppercase;
+    color: blue;
+}
+
+h1{
+    font-size: 4rem;
+}
